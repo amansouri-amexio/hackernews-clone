@@ -16,7 +16,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <header className='bg-black'>
+        <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">  
+          <div className="flex lg:flex-1"><a className='-m-1.5 p-1.5 black' href='/home'>Home</a></div>
+          <div className="flex lg:flex-1"><a className='-m-1.5 p-1.5' href='/stories'>Stories</a></div>
+          <div className="flex lg:flex-1"><a className='-m-1.5 p-1.5' href='/stories/top'>Top Stories</a></div>
+          <div className="flex lg:flex-1"><a className='-m-1.5 p-1.5' href='/stories/new'>New Stories</a></div>  
+          </nav>
+        </header>
+        <section>{children}</section>
+        </body>
     </html>
   )
 }
